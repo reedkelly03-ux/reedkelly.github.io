@@ -1,9 +1,9 @@
-/* ===========================
-   Modern Electric Blue Theme
-   by ChatGPT — Clean, Bold, Professional
-   =========================== */
+/* ====================================
+   LINKEDIN PRO 2.0 THEME
+   Clean • Professional • Corporate Blue
+   ==================================== */
 
-/* GLOBAL RESET */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,40 +12,27 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: #0e1628; /* Deep navy background */
-  color: #f1f5f9; /* Light text */
+  background: #f1f5f9;
+  color: #1e293b;
   line-height: 1.6;
-  overflow-x: hidden;
 }
-
-/* COLOR SYSTEM
-===================== 
-Primary Blues:
-#0ea5e9 — Electric Blue
-#3b82f6 — Bright Blue
-#1d4ed8 — Deep Blue
-#0f172a — Navy
-
-Neutrals:
-#f8fafc — Off-white
-#cbd5e1 — Soft gray
-#ffffff — White
-===================== */
 
 .container {
   max-width: 1150px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 25px;
 }
 
-/* NAVBAR */
+/* ====================================
+   NAVIGATION (LinkedIn Style)
+==================================== */
+
 .site-header {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #ffffff;
+  border-bottom: 1px solid #dce3eb;
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
 }
 
 .nav-container {
@@ -56,201 +43,273 @@ Neutrals:
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 800;
-  color: #38bdf8;
+  color: #0a66c2;
+  letter-spacing: -0.02em;
   text-decoration: none;
-  letter-spacing: 0.03em;
 }
 
 .main-nav {
   display: flex;
-  gap: 28px;
+  gap: 30px;
 }
 
 .nav-link {
-  color: #cbd5e1;
+  color: #475569;
   text-decoration: none;
   font-weight: 600;
   padding-bottom: 4px;
-  transition: all 0.2s ease;
-  position: relative;
+  transition: 0.2s;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: #0a66c2;
+}
+
 .nav-link.active {
-  color: #38bdf8;
+  color: #0a66c2;
+  border-bottom: 2px solid #0a66c2;
 }
 
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #38bdf8);
-  border-radius: 6px;
-}
+/* ====================================
+   HERO SECTION (Clean + Corporate)
+==================================== */
 
-/* HERO SECTION */
 .hero-section {
-  background: linear-gradient(135deg, #1d4ed8, #3b82f6, #0ea5e9);
-  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #0a66c2, #044a8f);
+  padding: 80px 25px;
   text-align: center;
   color: white;
-  box-shadow: inset 0 0 80px rgba(255,255,255,0.15);
 }
 
 .hero-headshot {
-  width: 195px;
-  height: 195px;
+  width: 165px;
+  height: 165px;
   border-radius: 50%;
   object-fit: cover;
-  border: 6px solid #ffffff;
-  box-shadow: 0 0 25px rgba(255,255,255,0.35);
-  margin-bottom: 22px;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 900;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
 }
 
 .hero-subtitle {
-  max-width: 700px;
-  margin: 10px auto;
-  color: #e0f2fe;
-  font-size: 1.2rem;
+  max-width: 750px;
+  margin: auto;
+  font-size: 1.15rem;
+  color: #e7f3ff;
+  line-height: 1.6;
 }
 
 .hero-buttons {
-  margin-top: 30px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
-/* BUTTONS */
+/* Buttons */
 .btn {
-  padding: 12px 28px;
-  border-radius: 999px;
+  padding: 11px 26px;
+  border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.25s ease;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
 }
 
 .primary-btn {
-  background: white;
-  color: #1d4ed8;
-  box-shadow: 0 0 18px rgba(255,255,255,0.4);
+  background: #ffffff;
+  color: #0a66c2;
+  border: 1px solid #dce3eb;
 }
 
 .primary-btn:hover {
-  background: #e2e8f0;
-  transform: translateY(-3px);
+  background: #e8f3ff;
 }
 
 .ghost-btn {
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .ghost-btn:hover {
   background: rgba(255,255,255,0.15);
 }
 
-/* SECTIONS */
+/* ====================================
+   SECTION HEADERS
+==================================== */
+
 section {
-  padding: 70px 20px;
+  padding: 60px 25px;
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: 900;
-  margin-bottom: 25px;
-  color: #f0f9ff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  color: #0a66c2;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
-/* PROJECT SECTIONS */
-.project-section {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 20px;
-  padding: 35px;
-  margin-bottom: 35px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
-  transition: 0.3s;
+/* ====================================
+   HOME PAGE CARDS
+==================================== */
+
+.project-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  border: 1px solid #dce3eb;
+  transition: 0.25s ease;
 }
 
-.project-section:hover {
+.project-card:hover {
   transform: translateY(-6px);
-  border-color: #38bdf8;
-  box-shadow: 0 10px 40px rgba(14,165,233,0.25);
+  border-color: #0a66c2;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+/* ====================================
+   PROJECT SECTIONS (Corporate Cards)
+==================================== */
+
+.project-section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px;
+  border: 1px solid #dce3eb;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
 }
 
 .project-header {
-  border-left: 5px solid #38bdf8;
+  border-left: 5px solid #0a66c2;
   padding-left: 15px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .project-header h3 {
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   font-weight: 800;
+  color: #1e293b;
 }
 
 .project-subtitle {
-  color: #cbd5e1;
+  color: #64748b;
+  font-size: 0.95rem;
 }
 
-.tag {
-  background: rgba(56,189,248,0.25);
-  color: #7dd3fc;
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  margin-right: 8px;
+.project-tags .tag {
   display: inline-block;
+  background: #e8f3ff;
+  color: #0a66c2;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 8px;
 }
 
 .project-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 26px;
+  gap: 24px;
+}
+
+.project-stars h4 {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 .project-stars p {
-  color: #e2e8f0;
+  color: #475569;
 }
 
-/* IMAGE CARDS */
 .project-images img {
   width: 100%;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  border: 1px solid #dce3eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* FIX: Smaller blurry Dial Logo */
+/* Small Dial Logo fix */
 .project-images img[src*="Dial_Logo"] {
-  width: 70% !important;
-  margin: 0 auto;
+  width: 75%;
   display: block;
+  margin: 0 auto;
 }
 
-/* FOOTER */
-.site-footer {
-  background: #0ea5e9;
-  padding: 25px;
-  text-align: center;
-  color: #0f172a;
-  font-weight: 700;
+/* ====================================
+   RESUME PAGE
+==================================== */
+
+.resume-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 35px;
+  border: 1px solid #dce3eb;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
+
+.resume-container h2 {
+  color: #0a66c2;
+}
+
+.resume-container p,
+.resume-container li {
+  color: #334155;
+}
+
+/* ====================================
+   CONTACT PAGE
+==================================== */
+
+.contact-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 35px;
+  border: 1px solid #dce3eb;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.contact-section a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+
+.site-footer {
+  background: #0a66c2;
+  padding: 22px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  margin-top: 45px;
+}
+
 
 
 
