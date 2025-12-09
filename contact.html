@@ -22,34 +22,36 @@
 </header>
 
 <section>
-  <h2>Contact Information</h2>
+  <h2>Contact</h2>
+  <p>
+    Whether you're interested in supply chain, project management, or UX-focused work, I’m always open
+    to connecting about full-time roles, internships, or collaborations.
+  </p>
 
-  <p>You can add your contact information below manually. This section is meant to be simple and professional.</p>
-
-  <div class="project-card" style="margin-top:25px;">
-    <h3>How to Reach Me</h3>
-    <ul>
-      <li><strong>Email:</strong> [Add your email here]</li>
-      <li><strong>Phone:</strong> [Add your phone number]</li>
-      <li><strong>LinkedIn:</strong> [Add your LinkedIn URL]</li>
-      <li><strong>Location:</strong> [Optional]</li>
+  <div class="project-card" style="margin-top:24px;">
+    <h3>Direct Contact</h3>
+    <ul style="list-style:none; margin-top:10px;">
+      <li><strong>Email:</strong> <a href="mailto:reed.kelly03@gmail.com" style="color:#0a66c2;">reed.kelly03@gmail.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+16087281982" style="color:#0a66c2;">(608) 728-1982</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/reedkellymsoe/" target="_blank" style="color:#0a66c2;">linkedin.com/in/reedkellymsoe</a></li>
+      <li><strong>Location:</strong> Milwaukee, WI</li>
     </ul>
   </div>
 
-  <!-- Optional contact form -->
-  <div class="project-card" style="margin-top:25px;">
-    <h3>Message Form (Optional)</h3>
-    <p>This form is front-end only. You can activate it later using Formspree or Netlify Forms.</p>
+  <div class="project-card" style="margin-top:24px;">
+    <h3>Send a Quick Message</h3>
+    <p style="margin-bottom:10px;">This form will open your email client with a pre-filled subject line.</p>
 
-    <form style="margin-top:15px;">
-      <input type="text" placeholder="Your Name" style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
-      <input type="email" placeholder="Your Email" style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
-      <textarea placeholder="Message" rows="4" style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d5db;"></textarea>
-      <button class="btn primary-btn" style="margin-top:10px; cursor:not-allowed;" disabled>Submit</button>
-      <p style="margin-top:8px; color:#6b7280;">Form disabled until backend is configured.</p>
+    <form onsubmit="handleContactSubmit(event)" style="margin-top:10px;">
+      <input id="nameField" type="text" placeholder="Your name" required
+             style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
+      <input id="topicField" type="text" placeholder="Topic (e.g., Supply Chain Role, Project Chat)" required
+             style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
+      <textarea id="messageField" rows="4" placeholder="Your message"
+                style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d5db;"></textarea>
+      <button class="btn primary-btn" type="submit" style="margin-top:10px;">Open Email</button>
     </form>
   </div>
-
 </section>
 
 <footer class="site-footer">
@@ -58,9 +60,21 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('nameField').value;
+    const topic = document.getElementById('topicField').value;
+    const message = document.getElementById('messageField').value;
+
+    const subject = encodeURIComponent(`Website inquiry – ${topic}`);
+    const body = encodeURIComponent(`Hi Reed,\n\nMy name is ${name}.\n\n${message}\n\nBest,\n${name}`);
+    window.location.href = `mailto:reed.kelly03@gmail.com?subject=${subject}&body=${body}`;
+  }
 </script>
 
 </body>
 </html>
+
 
 
