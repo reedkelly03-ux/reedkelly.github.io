@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Reed Kelly</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Reed Kelly</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container section-narrow">
+        <h1>Contact</h1>
+        <p class="page-intro">
+          I’m open to full-time roles in project management, supply chain, and operations,
+          as well as conversations about collaboration and professional networking.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <h2>How to Reach Me</h2>
+          <p>
+            Add your preferred contact methods below. You can update this file anytime to reflect
+            new roles, locations, or communication preferences.
+          </p>
+
+          <!-- Replace the placeholder text in the brackets with your real info -->
+          <ul class="contact-list">
+            <li><strong>Email:</strong> [kellyr@msoe.edu]</li>
+            <li><strong>Phone:</strong> [(608)728-1982]</li>
+            <li><strong>LinkedIn:</strong> [https://www.linkedin.com/in/reedkellymsoe/]</li>
+            <!-- Add any other links you want: portfolio, GitHub, etc. -->
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <h2>Quick Message (Optional Form)</h2>
+          <p>
+            This form is front-end only. If you want it to actually send messages, you can later
+            connect it to a service like Formspree, Netlify Forms, or a custom backend.
+          </p>
+          <form class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="your@email.com" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Write your message here"></textarea>
+            </label>
+            <button type="submit" class="btn primary-btn" disabled>
+              Submit (setup required)
+            </button>
+            <p class="form-note">
+              This button is disabled by default so no data is sent anywhere. You can enable it later
+              once you configure a form handler.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Reed Kelly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
