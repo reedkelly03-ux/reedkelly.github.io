@@ -4,83 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reed Kelly | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Site Header / Nav -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">Reed Kelly</a>
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="resume.html" class="nav-link">Resume</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">Reed Kelly</a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="resume.html" class="nav-link">Resume</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="hero-content container">
+    <img src="assets/headshot.jpg" class="hero-headshot" alt="Reed Kelly Headshot" />
+    
+    <h1 class="hero-title">Hi, I'm <span>Reed Kelly</span></h1>
+    <p class="hero-subtitle">
+      A detail-oriented Operations & Supply Chain professional with experience in
+      project management, procurement data analytics, and technical problem-solving.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="projects.html" class="btn primary-btn">View My Projects</a>
+      <a href="resume.html" class="btn ghost-btn">Resume</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow">Operations & Supply Chain | Project Management</p>
-          <h1>Hi, I’m Reed.</h1>
-          <p class="hero-subtitle">
-            I’m a detail-oriented supply chain and project management student who likes turning complex problems
-            into clear, actionable plans — whether that’s coordinating construction projects, improving data
-            integrity, or building business concepts with real-world impact.
-          </p>
-          <div class="hero-actions">
-            <a href="projects.html" class="btn primary-btn">View My Projects</a>
-            <a href="resume.html" class="btn ghost-btn">See My Resume</a>
-          </div>
-        </div>
-        <div class="hero-image-wrapper">
-          <!-- Make sure assets/headshot.jpg exists -->
-          <img src="assets/headshot.jpg" alt="Professional headshot of Reed Kelly" class="hero-image" />
-        </div>
-      </div>
-    </section>
+<!-- ABOUT SECTION -->
+<section class="about-section container fade-in">
+  <h2>About Me</h2>
+  <p>
+    My name is Reed Kelly, and I am a senior Operations and Systems Management major with a 
+    Finance minor at the Milwaukee School of Engineering.
+  </p>
+  <p>
+    I have four summers of internship experience in project management and supply chain in both 
+    construction and industrial industries.
+  </p>
+  <p>
+    I am skilled in leading through communication, software (MS Excel, SAP, Ariba Contract Management), 
+    and data-driven decision making. My interests center around supply chain optimization, analytics, and 
+    using technology to create efficient operations.
+  </p>
+</section>
 
-    <!-- About Me (matches UXD notes) -->
-    <section class="section">
-      <div class="container section-narrow">
-        <h2>About Me</h2>
-        <p>
-          My name is Reed Kelly, and I am a senior Operations and Systems Management major with a Finance minor at
-          the Milwaukee School of Engineering.
-        </p>
-        <p>
-          I have four summers of internship experience in project management and supply chain in both construction
-          and industrial industries.
-        </p>
-        <p>
-          I am skilled in leading through communication and software (MS Excel, SAP, Ariba Contract Management).
-          My interests center around supply chain optimization, data-driven decision making, and using technology
-          to make operations more efficient and reliable.
-        </p>
-        <p class="cta-text">
-          Let’s dig into some of my projects over the years that have sculpted my professional portfolio!
-        </p>
-        <a href="projects.html" class="btn primary-btn">Explore My Work</a>
-      </div>
-    </section>
-  </main>
+<!-- PROJECT PREVIEW -->
+<section class="project-preview-section container fade-in">
+  <h2>Highlighted Work</h2>
+  <div class="project-preview-grid">
+    <a class="project-card" href="projects.html">
+      <h3>Dial – Emergency App</h3>
+      <p>A silent emergency-alert concept designed to protect victims in high-risk situations.</p>
+    </a>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Reed Kelly. All rights reserved.</p>
-    </div>
-  </footer>
+    <a class="project-card" href="projects.html">
+      <h3>Remington 870 Supply Chain</h3>
+      <p>Full analysis of materials, suppliers, quality issues, and sourcing strategy.</p>
+    </a>
 
-  <script>
-    // Simple current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <a class="project-card" href="projects.html">
+      <h3>Bias in Design Project</h3>
+      <p>A UX visual project exploring how psychology shapes human-computer interaction.</p>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Reed Kelly. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
