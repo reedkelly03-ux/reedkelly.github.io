@@ -1,6 +1,6 @@
 /* ===========================
    POLISHED LINKEDIN-THEME
-   With original spacing + enhancements
+   WITH FIXED SPACING + COLORS + ANIMATION
 =========================== */
 
 * {
@@ -11,13 +11,19 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: #f4f6fb;
+  background: #f3f6fc;
   color: #1f2937;
   line-height: 1.6;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===========================
-   NAV
+   NAVIGATION
 =========================== */
 
 .site-header {
@@ -39,9 +45,10 @@ body {
 
 .logo {
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: #0a66c2;
   text-decoration: none;
+  letter-spacing: .2px;
 }
 
 .nav-link {
@@ -57,42 +64,58 @@ body {
 }
 
 .nav-link.active {
-  border-color: #0a66c2;
   color: #0a66c2;
+  border-color: #0a66c2;
 }
 
 /* ===========================
-   HERO with CUSTOM SVG + PATTERN
+   GLOBAL SUPPLY CHAIN PATTERN
+=========================== */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='220' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='110' cy='110' r='90' fill='none' stroke='%23b6c4dd33' stroke-width='2'/%3E%3Cline x1='110' y1='20' x2='110' y2='200' stroke='%23b6c4dd33' stroke-width='2'/%3E%3Cline x1='20' y1='110' x2='200' y2='110' stroke='%23b6c4dd33' stroke-width='2'/%3E%3C/svg%3E");
+  opacity: 0.25;
+  background-size: 420px;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* ===========================
+   HERO SECTION (with SVG)
 =========================== */
 
 .hero-section {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #0a66c2 0%, #004c97 100%);
-  padding: 80px 0;
+  padding: 85px 0;
   color: white;
+  background: linear-gradient(135deg, #0a66c2 0%, #004c97 100%);
 }
 
-/* Abstract supply chain pattern */
+/* Abstract SVG network pattern */
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M150 0 L300 150 L150 300 L0 150 Z' fill='none' stroke='%23ffffff22' stroke-width='2'/%3E%3C/svg%3E");
-  opacity: 0.35;
+  opacity: 0.22;
   background-size: 350px;
   background-repeat: repeat;
 }
 
-/* Wavy subtle gradient overlay */
+/* Custom SVG wave overlay */
 .hero-section::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='1000' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff11' d='M0 150 Q250 0 500 150 T1000 150 V300 H0 Z'/%3E%3C/svg%3E");
-  background-size: cover;
+  background: url("data:image/svg+xml,%3Csvg width='1200' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff15' d='M0 200 Q300 0 600 200 T1200 200 V300 H0 Z'/%3E%3C/svg%3E");
+  opacity: 0.65;
   background-repeat: no-repeat;
-  opacity: 0.6;
+  background-size: cover;
 }
 
 .hero-inner {
@@ -100,37 +123,40 @@ body {
   margin: auto;
   padding: 20px;
   position: relative;
-  z-index: 2; /* keep above SVG */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 45px;
   align-items: center;
 }
 
 .hero-headshot {
-  width: 240px;
-  height: 240px;
+  width: 255px;
+  height: 255px;
   border-radius: 50%;
   border: 5px solid #fff;
   object-fit: cover;
-  box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+  box-shadow: 0px 12px 35px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.hero-headshot:hover {
+  transform: scale(1.03);
 }
 
 .hero-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  opacity: 0.95;
-  margin-top: 5px;
+  font-size: 1.35rem;
+  margin-top: 8px;
 }
 
 .hero-meta {
-  font-size: 1.1rem;
   margin-top: 8px;
-  opacity: 0.9;
+  font-size: 1.1rem;
+  opacity: 0.95;
 }
 
 .btn {
@@ -139,15 +165,20 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: 0.2s;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 12px;
 }
 
 .primary-btn {
   background: white;
   color: #0a66c2;
+  box-shadow: 0 3px 12px rgba(255,255,255,0.4);
 }
 
 .primary-btn:hover {
-  background: #e6f0ff;
+  background: #e8f1ff;
+  transform: translateY(-2px);
 }
 
 .ghost-btn {
@@ -156,7 +187,8 @@ body {
 }
 
 .ghost-btn:hover {
-  background: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
 }
 
 /* ===========================
@@ -170,9 +202,9 @@ section {
 }
 
 .about-text {
-  font-size: 1.1rem;
+  font-size: 1.12rem;
+  line-height: 1.75;
   max-width: 900px;
-  line-height: 1.7;
 }
 
 /* ===========================
@@ -182,63 +214,68 @@ section {
 .project-section {
   background: white;
   padding: 28px;
-  border-radius: 15px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0px 4px 18px rgba(0,0,0,0.06);
-  margin-bottom: 35px;
+  border-radius: 16px;
+  border: 1px solid #d8e0eb;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+  animation: fadeIn 0.5s ease-out;
 }
 
 .project-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
   color: #0a66c2;
+  margin-bottom: 12px;
 }
 
 .project-desc {
-  font-size: 1.05rem;
+  font-size: 1.07rem;
   color: #374151;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
-/* Image sizes */
+/* Global image size (smaller than before) */
 .project-image {
-  width: 82%;
+  width: 70%;
   display: block;
   margin: 12px auto;
-  border-radius: 10px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #d0d7e4;
+  border-radius: 12px;
+  box-shadow: 0px 8px 22px rgba(0,0,0,0.08);
 }
 
-/* Dial logo smaller */
-.project-image.logo-small {
-  width: 40%;
+/* Dial logo extra small */
+.project-image[src*="Dial_Logo"] {
+  width: 32%;
 }
 
 /* ===========================
-   CONTACT & FOOTER
+   CONTACT CARDS
 =========================== */
 
 .contact-card {
   background: white;
   padding: 28px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  border: 1px solid #d7e2ef;
   box-shadow: 0px 4px 18px rgba(0,0,0,0.06);
 }
 
-/* Footer banner */
+/* ===========================
+   FOOTER BANNER
+=========================== */
+
 .footer-banner {
   background: linear-gradient(135deg, #0a66c2, #004c97);
-  padding: 40px 20px;
-  text-align: center;
   color: white;
-  font-size: 1.3rem;
+  padding: 38px 20px;
+  text-align: center;
+  font-size: 1.32rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-top: 60px;
+  letter-spacing: 0.4px;
+  margin-top: 70px;
 }
 
-/* Footer */
+/* FOOTER */
 .site-footer {
   text-align: center;
   padding: 20px 0;
@@ -252,8 +289,8 @@ section {
 
 #backToTop {
   position: fixed;
-  bottom: 26px;
-  right: 26px;
+  bottom: 28px;
+  right: 28px;
   background: #0a66c2;
   color: white;
   border: none;
@@ -271,12 +308,14 @@ section {
   transform: translateY(-3px);
 }
 
-/* Show button */
 #backToTop.show {
   display: block;
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE
+=========================== */
+
 @media (max-width: 850px) {
   .hero-inner {
     grid-template-columns: 1fr;
