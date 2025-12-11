@@ -25,37 +25,27 @@
   <h2>Contact Me</h2>
 
   <p style="max-width:900px;">
-    Whether you're reaching out about supply chain roles, project management opportunities, or simply
-    want to connect, I’m always open to talking. Feel free to connect through any of the options below.
+    Whether you're reaching out about supply chain roles...
   </p>
 
   <div class="contact-card" style="margin-top:28px;">
-    <h3 style="margin-bottom:12px;">Direct Contact</h3>
+    <h3>Direct Contact</h3>
 
     <ul style="list-style:none; padding-left:0; margin-top:10px;">
-      <li><strong>Email:</strong> <a href="mailto:reed.kelly03@gmail.com" style="color:#0a4fa3;">reed.kelly03@gmail.com</a></li>
-      <li>
-        <strong>LinkedIn:</strong> 
-        <a href="https://www.linkedin.com/in/reedkellymsoe/" target="_blank" style="color:#0a4fa3;">
-          linkedin.com/in/reedkellymsoe
-        </a>
-      </li>
+      <li><strong>Email:</strong> <a href="mailto:reed.kelly03@gmail.com">reed.kelly03@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/reedkellymsoe/" target="_blank">linkedin.com/in/reedkellymsoe</a></li>
       <li><strong>Location:</strong> Milwaukee, WI</li>
     </ul>
   </div>
 
   <div class="contact-card" style="margin-top:28px;">
     <h3>Send a Quick Message</h3>
-    <p style="margin-bottom:10px;">This form opens your email app with a pre-filled message.</p>
 
-    <form onsubmit="handleContactSubmit(event)" style="margin-top:10px;">
-      <input id="nameField" type="text" placeholder="Your name" required
-             style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
-      <input id="topicField" type="text" placeholder="Topic (e.g., Supply Chain Role)" required
-             style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
-      <textarea id="messageField" rows="4" placeholder="Your message"
-                style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d5db;"></textarea>
-      <button class="btn primary-btn" type="submit" style="margin-top:10px;">Open Email</button>
+    <form onsubmit="handleContactSubmit(event)">
+      <input id="nameField" type="text" placeholder="Your name" required>
+      <input id="topicField" type="text" placeholder="Topic (e.g., Supply Chain Role)" required>
+      <textarea id="messageField" rows="4" placeholder="Your message"></textarea>
+      <button class="btn primary-btn" type="submit">Open Email</button>
     </form>
   </div>
 </section>
@@ -64,8 +54,19 @@
   © <span id="year"></span> Reed Kelly. All rights reserved.
 </footer>
 
+<button id="backToTop">↑</button>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  const topBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) topBtn.classList.add("show");
+    else topBtn.classList.remove("show");
+  });
+  topBtn.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
 
   function handleContactSubmit(e) {
     e.preventDefault();
@@ -81,6 +82,7 @@
 
 </body>
 </html>
+
 
 
 
