@@ -69,12 +69,25 @@
   © <span id="year"></span> Reed Kelly. All rights reserved.
 </footer>
 
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop">↑</button>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  const topBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) topBtn.classList.add("show");
+    else topBtn.classList.remove("show");
+  });
+  topBtn.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
 </script>
 
 </body>
 </html>
+
 
 
 
