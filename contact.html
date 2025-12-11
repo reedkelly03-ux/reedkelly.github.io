@@ -22,30 +22,36 @@
 </header>
 
 <section>
-  <h2>Contact</h2>
-  <p>
-    Whether you're interested in supply chain, project management, or UX-focused work, I’m always open
-    to connecting about full-time roles, internships, or collaborations.
+  <h2>Contact Me</h2>
+
+  <p style="max-width:900px;">
+    Whether you're reaching out about supply chain roles, project management opportunities, or simply
+    want to connect, I’m always open to talking. Feel free to connect through any of the options below.
   </p>
 
-  <div class="project-card" style="margin-top:24px;">
-    <h3>Direct Contact</h3>
-    <ul style="list-style:none; margin-top:10px;">
-      <li><strong>Email:</strong> <a href="mailto:reed.kelly03@gmail.com" style="color:#0a66c2;">reed.kelly03@gmail.com</a></li>
-      <li><strong>Phone:</strong> <a href="tel:+16087281982" style="color:#0a66c2;">(608) 728-1982</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/reedkellymsoe/" target="_blank" style="color:#0a66c2;">linkedin.com/in/reedkellymsoe</a></li>
+  <div class="contact-card" style="margin-top:28px;">
+    <h3 style="margin-bottom:12px;">Direct Contact</h3>
+
+    <ul style="list-style:none; padding-left:0; margin-top:10px;">
+      <li><strong>Email:</strong> <a href="mailto:reed.kelly03@gmail.com" style="color:#0a4fa3;">reed.kelly03@gmail.com</a></li>
+      <li>
+        <strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/reedkellymsoe/" target="_blank" style="color:#0a4fa3;">
+          linkedin.com/in/reedkellymsoe
+        </a>
+      </li>
       <li><strong>Location:</strong> Milwaukee, WI</li>
     </ul>
   </div>
 
-  <div class="project-card" style="margin-top:24px;">
+  <div class="contact-card" style="margin-top:28px;">
     <h3>Send a Quick Message</h3>
-    <p style="margin-bottom:10px;">This form will open your email client with a pre-filled subject line.</p>
+    <p style="margin-bottom:10px;">This form opens your email app with a pre-filled message.</p>
 
     <form onsubmit="handleContactSubmit(event)" style="margin-top:10px;">
       <input id="nameField" type="text" placeholder="Your name" required
              style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
-      <input id="topicField" type="text" placeholder="Topic (e.g., Supply Chain Role, Project Chat)" required
+      <input id="topicField" type="text" placeholder="Topic (e.g., Supply Chain Role)" required
              style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d1d5db;">
       <textarea id="messageField" rows="4" placeholder="Your message"
                 style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d5db;"></textarea>
@@ -67,7 +73,7 @@
     const topic = document.getElementById('topicField').value;
     const message = document.getElementById('messageField').value;
 
-    const subject = encodeURIComponent(`Website inquiry – ${topic}`);
+    const subject = encodeURIComponent(`Website Inquiry – ${topic}`);
     const body = encodeURIComponent(`Hi Reed,\n\nMy name is ${name}.\n\n${message}\n\nBest,\n${name}`);
     window.location.href = `mailto:reed.kelly03@gmail.com?subject=${subject}&body=${body}`;
   }
@@ -75,6 +81,7 @@
 
 </body>
 </html>
+
 
 
 
