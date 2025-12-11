@@ -21,100 +21,81 @@
   </div>
 </header>
 
-
-<!--------------------------
-     PROJECTS PAGE
---------------------------->
-
 <section>
   <h2>My Projects</h2>
 
-
   <!-- DIAL PROJECT -->
   <div class="project-section">
-
     <h3>Dial — Silent Emergency Response App</h3>
+
     <p class="project-desc">
-      In my entrepreneurship class, we were tasked with creating a realistic business idea and pitching it to the entire class. I wanted to build something meaningful—not just another generic app—so I researched gaps in public safety technology. I discovered how many people (domestic-violence victims, students, gig workers, etc.) do not always have the ability to safely call 911. That insight became the foundation for Dial, a silent emergency-alert application.
-      <br><br>
-      I transformed the idea into a complete, structured business model by defining customer segments, mapping the technical requirements, building the value proposition, and creating a dual revenue model: subscription plans for individuals and licensing packages for government agencies. I also designed a fully polished pitch deck explaining the everyday problem this app solves and practiced delivering the concept in a human-centered way.
-      <br><br>
-      The pitch was well received—my classmates and professor said it felt both innovative and practical. This project strengthened my ability to take a raw idea and build a market-ready business case around it, reinforcing skills in strategy, communication, and entrepreneurship.
+      In my entrepreneurship class, we were tasked with creating a realistic business idea and pitching it to the entire class...
+      (same text as your current version)
     </p>
 
-    <!-- DIAL IMAGES -->
     <img src="assets/Dial_Logo.png" class="project-image" alt="Dial Logo" />
     <img src="assets/Dial_Revenue.png" class="project-image" alt="Dial Revenue Model" />
 
-    <!-- VIEW PROJECT BUTTON -->
-    <a href="assets/Dial_Silent_Emergency_Response.pdf" class="btn primary-btn" target="_blank" style="margin-top: 18px;">
+    <a href="assets/Dial_Silent_Emergency_Response.pdf" class="btn primary-btn" target="_blank">
       View Full Dial Project
     </a>
-
   </div>
 
-
-
-  <!-- REMINGTON 870 SUPPLY CHAIN PROJECT -->
+  <!-- REMINGTON -->
   <div class="project-section">
-
     <h3>Remington 870 Supply Chain Management Case Study</h3>
+
     <p class="project-desc">
-      In my Supply Chain Management course, I selected the Remington 870 shotgun as the focus of my final case study because of its complex manufacturing process, diverse components, and mix of global and domestic suppliers. This made it an ideal product for analyzing a complete end-to-end supply chain.
-      <br><br>
-      My objective was to evaluate demand patterns, supplier performance, quality management, global sourcing decisions, inventory planning, transportation considerations, and risk mitigation. I began by mapping each major component—barrels, stocks, receivers, internal assemblies—and identifying the suppliers responsible for producing them. I then conducted a Porter’s Five Forces analysis, explored the Voice of Customer expectations, and created a supplier scorecard to identify gaps.
-      <br><br>
-      A key finding was that Criterion Barrels had a 5% defect rate, significantly higher than the sub-1% industry benchmark. I proposed supplier development strategies, performance-based contracts, and joint quality audits to reduce this failure rate. I also developed global sourcing alternatives to reduce cost and improve reliability, while analyzing inventory turnover and forecasting patterns to optimize stocking levels.
-      <br><br>
-      The case study was recognized for its depth, clear methodology, and actionable recommendations. This project strengthened my understanding of supplier relationships, operational risk, and how to use data to drive supply chain improvements.
+      In my Supply Chain Management course, I selected the Remington 870 shotgun...
+      (same text as your current version)
     </p>
 
-    <!-- REMINGTON IMAGES -->
-    <img src="assets/Remington_Inventory_Overview.png" class="project-image" alt="Remington Inventory Overview" />
-    <img src="assets/Remington_Production_Plan.png" class="project-image" alt="Remington Production Planning" />
+    <img src="assets/Remington_Inventory_Overview.png" class="project-image" />
+    <img src="assets/Remington_Production_Plan.png" class="project-image" />
 
-    <!-- VIEW PROJECT BUTTON -->
-    <a href="assets/Remington_Case_Study.pdf" class="btn primary-btn" target="_blank" style="margin-top: 18px;">
+    <a href="assets/Remington_Case_Study.pdf" class="btn primary-btn" target="_blank">
       View Full Remington Case Study
     </a>
-
   </div>
 
-
-
-
-  <!-- BIAS IN DESIGN PROJECT -->
+  <!-- BIAS PROJECT -->
   <div class="project-section">
-
     <h3>Bias in Design — Reverse Psychology in User Interfaces</h3>
+
     <p class="project-desc">
-      For my UX Design course, I created a visual educational project focused on Reverse Psychology in digital interfaces. The assignment required selecting a cognitive bias, researching it through credible sources, finding real-world examples, and building a polished visual presentation using CRAP design principles.
-      <br><br>
-      I analyzed how apps subtly steer user behavior—sometimes ethically, sometimes not. Examples included Duolingo's streak-loss notifications and AdBlock’s ironic “Don’t install AdBlock” prompt. I then designed a structured LinkedIn-style carousel explaining the bias, why it influences people, how companies use it, ethical guidelines, and contrasting examples.
-      <br><br>
-      This project strengthened my understanding of human behavior in digital environments and improved my ability to communicate complex UX concepts through clear visual storytelling.
+      For my UX Design course, I created a visual educational project focused on Reverse Psychology...
+      (same text as your current version)
     </p>
 
-    <!-- VIEW PROJECT BUTTON ONLY -->
-    <a href="assets/Bias_in_Design_Project.pdf" class="btn primary-btn" target="_blank" style="margin-top: 18px;">
+    <a href="assets/Bias_in_Design_Project.pdf" class="btn primary-btn" target="_blank">
       View Bias in Design Project
     </a>
-
   </div>
 
-
 </section>
-
 
 <footer class="site-footer">
   © <span id="year"></span> Reed Kelly. All rights reserved.
 </footer>
 
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop">↑</button>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  const topBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) topBtn.classList.add("show");
+    else topBtn.classList.remove("show");
+  });
+  topBtn.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
 </script>
 
 </body>
 </html>
+
 
 
